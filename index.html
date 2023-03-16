@@ -62,10 +62,10 @@
 
 
                 <div class="flex column overflow">
-                    <div v-for="contact in contacts" class="contacts">
+                    <div v-for="(contact, index) in contacts" class="contacts" @click="isClick = index">
                         <div class="flex">
                             <div class="main-image-size">
-                                <img :src="contact.avatar" alt="">
+                                <img :src="contacts[index].avatar" alt="">
                             </div>
                             <div>
                                 <h3>{{contact.name}}</h3>
@@ -86,10 +86,10 @@
                 <header class="flex">
                     <div class="flex">
                         <div class="main-image-size">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="contacts[isClick].avatar" alt="">
                         </div>
                         <div>
-                            <h3>Michele</h3>
+                            <h3>{{contacts[isClick].name}}</h3>
                             <h6>Ultimo accesso oggi alle 12:00</h6>
                         </div>
                     </div>
@@ -106,23 +106,10 @@
 
 
                 <main>
-                    <div class="my-message">
-                        <h4>Hai portato a spasso il cane?</h4>
+                    <div v-for="(message, index) in contacts[isClick].messages" :class="message.status == 'sent' ? 'my-message' : 'their-message'">
+                        <h4>{{message.message}}</h4>
                         <span class="data">15:50</span>
                     </div>
-                    <div class="my-message">
-                        <h4>Ricordati di stendere i panni</h4>
-                        <span class="data">15:50</span>
-                    </div>
-
-
-                    <div class="their-message">
-                        <h4>Tutto fatto!</h4>
-                        <span class="data">16:10</span>
-                    </div>
-
-
-
                 </main>
 
 

@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       
+        isClick: 0,
         contacts: [
             {
                 name: 'Michele',

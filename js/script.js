@@ -4,11 +4,17 @@ createApp({
   data() {
     return {
       
+        // new message init
         newMessage: {date: '', message: '', status: 'sent'},
+        // new responde init
         newResponse: {date: '', message: 'Ok!', status: 'received'},
+        // index most important thing for the index of the array / object
         isClick: 0,
+        // init the response at 0 or null, it's the same
         response: 0,
+        // this one helps for filtering  the searchBar by Name
         search: "",
+        // object into array into array into object :) :) :) :) :)
         items: [
             { info: 'Message info' },
             { delete: 'Delete message', },
@@ -182,13 +188,23 @@ createApp({
 
   methods: {
     
+    // this one adds the newMessage from input
     addMessage() {
-        this.contacts[this.isClick].messages.push(this.newMessage);
-        this.newMessage = {date: '', message: '', status: 'sent'};
 
-        this.responseTime();
+        if (this.newMessage.message == "" || this.newMessage.message == null) {
+            console.log("Error Occured While SUBMIT");
+        } else {
+
+            this.contacts[this.isClick].messages.push(this.newMessage);
+            this.newMessage = {date: '', message: '', status: 'sent'};
+
+            this.responseTime();
+
+        }
+
     },
 
+    // this one adds the newMessage from the cocmputer in page
     responseTime() {
 
         this.responde = setTimeout(() => {
@@ -200,11 +216,13 @@ createApp({
         }, 1000);
     },
 
+    // stop responde timer
     responseTimeStop() {
         clearTimeout(this.response);
     },
   },
 
+  // filter for search bar
   computed: {
 
     filteredSearch() {

@@ -5,6 +5,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #101a20;
+}
+
+
+
 /* SCROLL BAR CUSTOM */
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px #111b21;
@@ -24,46 +33,55 @@
 
 
 
-body {
-    width: 100%;
-    height: 100%;
-    color: white;
-    background-color: #111b21;
-}
-
+/* CONTAINER and SIDE */
 .container {
     display: flex;
+    margin: 20px auto;
     height: 100%;
     max-width: 1600px;
-    margin: 20px auto;
 }
-
+/* _______________________________________________________ */
 .left-side {
     height: calc(100vh - 40px);
     width: calc(100% / 4 + 200px);
-    background-color: #111b21;
     border-right: 1px solid #272f34;
+    background-color: #111b21;
 }
-
+/* _______________________________________________________ */
 .main-side {
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 40px);
     width: 100%;
     background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
 }
+/* /CONTAINER and SIDE */
 
+
+
+/* ABOUT FLEX */
 .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+/* _______________________________________________________ */
+.justify {
+    justify-content: inherit;
+}
+/* _______________________________________________________ */
+.column {
+    flex-direction: column;
+}
+/* _______________________________________________________ */
 .gap {
     gap: 10px;
 }
+/* /ABOUT FLEX */
 
 
+
+/* strange classes */
 .main-image-size {
     padding-right: 15px;
 }
@@ -77,192 +95,206 @@ header, .my-profile {
     padding: 10px 16px;
     background-color: #202c33;
 }
+/* /strange classes */
 
-.icon-padding {
-    padding: 10px;
-    color: #aebac1;
+
+
+/* TITLE AND TEXT */
+h4 {
+    margin-right: 25px;
+    font-size: 14px;
+    font-weight: normal;
 }
-
-footer {
-    padding: 10px 16px;
-    background-color: #202c33;
-}
-
+/* _______________________________________________________ */
 h6 {
     color: #aebac1;;
 }
-
-
-main {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    height: 100%;
-    background-image: url(../img/background.jpg);
-
+/* _______________________________________________________ */
+span {
+    font-size: 12px;
 }
+/* _______________________________________________________ */
+.black {
+    color: rgba(0, 0, 0, 0.815);
+}
+/* /TITLE AND TEXT */
 
+
+
+/* INPUT AND BUTTONS */
 input {
-    width: 100%;
     padding:  9px 12px;
-    border-radius: 10px;
-    background-color: #2a3942;
+    width: 100%;
     border: none;
+    border-radius: 10px;
     color: #aebac1;
-}
-
-button {
-    border-radius: 10px;
     background-color: #2a3942;
-    border: none;
+}
+/* _______________________________________________________ */
+button {
     padding:  9px 12px;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    background-color: #2a3942;
 }
-
-.be-unite {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.footer-icon-padding {
-    padding: 5px 10px;
-}
-
-.max-size {
-    width: 100%;
-}
-
-.column {
-    flex-direction: column;
-}
-
-.fa-bell-slash {
-    padding: 16px 14px;
-    margin-right: 15px;
-    background-color: #202c33;
-    color: #8edafc;
-    border-radius: 50%;
-}
+/* /INPUT AND BUTTONS */
 
 
-.notify {
-    text-decoration: underline;
-    color: #5d869d;
-    font-size: 14px;
-}
 
+/* CONTACTS */
 .bell {
     justify-content: inherit;
     padding: 10px 16px;
     background-color: #8edafc;
 }
-
-.black {
-    color: rgba(0, 0, 0, 0.815);
+/* _______________________________________________________ */
+.notify {
+    text-decoration: underline;
+    font-size: 14px;
+    color: #5d869d;
 }
-
+/* _______________________________________________________ */
+.be-unite {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+/* _______________________________________________________ */
 .search-bar, .contacts {
     padding: 10px 16px;
 }
-
-.fa-bars-filter {
-    color: white;
-}
-
-.fa-solid, .fa-regular {
-    cursor: pointer;
-    color: #aebac1;
-}
-
+/* _______________________________________________________ */
 .contacts {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #2d353a;
     width: 100%;
+    border-bottom: 1px solid #2d353a;
 }
-
+/* _______________________________________________________ */
 .contacts:hover {
-    background-color: #2a3942;
     cursor: pointer;
+    background-color: #2a3942;
 }
-
+/* _______________________________________________________ */
 .overflow {
-    overflow-y: scroll;
     height: calc(100% - 196px);
+    overflow-y: scroll;
 }
+/* /CONTACTS */
 
-span {
-    font-size: 12px;
+
+
+/* MAIN SIDE */
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 50px;
+    background-image: url(../img/background.jpg);
 }
-
-
+/* _______________________________________________________ */
 .my-message {
     position: relative;
     display: flex;
-    padding: 6px 9px 8px;
+    align-self: flex-end;
     margin: 5px;
+    padding: 6px 9px 8px;
     border-radius: 6px;
     background-color: #005c4b;
-    align-self: flex-end;
 }
-
+/* _______________________________________________________ */
 .their-message {
     position: relative;
     display: flex;
-    padding: 6px 9px 8px;
+    align-self: flex-start;
     margin: 5px;
+    padding: 6px 9px 8px;
     border-radius: 6px;
     background-color: #202c33;
-    align-self: flex-start;
 }
-
+/* _______________________________________________________ */
 .data {
-    font-size: 10px;
     position: absolute;
     bottom: 2px;
     right: 5px;
+    font-size: 10px;
 }
+/* /MAIN SIDE */
 
-h4 {
-    font-weight: normal;
-    font-size: 14px;
-    margin-right: 25px;
+
+
+/* FOOTER */
+footer {
+    padding: 10px 16px;
+    background-color: #202c33;
 }
+/* _______________________________________________________ */
+.max-size {
+    width: 100%;
+}
+/* /FOOTER */
+
+
 
 /* DROPDOWN */
 .dropdown {
-    position: absolute;
     display: inline-block;
+    position: absolute;
     top: 0;
     right: 8px;
-  }
+}
 /* _______________________________________________________ */
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     top: 16px;
     left: -20px;
-    background-color: #202c33;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 10px 13px;
     z-index: 1;
     border-radius: 20px;
-  }
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #202c33;
+}
 /* _______________________________________________________ */
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 /* _______________________________________________________ */
-  p {
+p {
     color: #a9bac1;
     cursor: pointer;
-  }
+}
 /* /DROPDOWN */
 
 
-.none {
-    display: none;
+
+/* FONTAWESOME */
+.icon-padding {
+    padding: 10px;
+    color: #aebac1;
 }
+/* _______________________________________________________ */
+.footer-icon-padding {
+    padding: 5px 10px;
+}
+/* _______________________________________________________ */
+.fa-bell-slash {
+    margin-right: 15px;
+    padding: 16px 14px;
+    border-radius: 50%;
+    color: #8edafc;
+    background-color: #202c33;
+}
+/* _______________________________________________________ */
+.fa-bars-filter {
+    color: white;
+}
+/* _______________________________________________________ */
+.fa-solid, .fa-regular {
+    cursor: pointer;
+    color: #aebac1;
+}
+/* /FONTAWESOME */

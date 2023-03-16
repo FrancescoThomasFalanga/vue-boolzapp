@@ -9,6 +9,10 @@ createApp({
         isClick: 0,
         response: 0,
         search: "",
+        items: [
+            { info: 'Message info' },
+            { delete: 'Delete message', },
+          ],
         contacts: [
             {
                 name: 'Michele',

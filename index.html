@@ -106,9 +106,16 @@
 
 
                 <main>
-                    <div v-for="(message, index) in contacts[isClick].messages" :class="message.status == 'sent' ? 'my-message' : 'their-message'">
+                    <div v-for="(message, index) in contacts[isClick].messages" :class="message.status == 'sent' ? 'my-message' : 'their-message' ">
                         <h4>{{message.message}}</h4>
                         <span class="data">{{message.date}}</span>
+                        <div class="dropdown">
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                            <div class="dropdown-content" v-for="item in items">
+                            <p>{{item.info}}</p>
+                            <p @click="contacts[isClick].messages.splice(index, 1)">{{item.delete}}</p>
+                            </div>
+                          </div>
                     </div>
                 </main>
 

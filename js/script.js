@@ -5,7 +5,9 @@ createApp({
     return {
       
         newMessage: {date: '', message: '', status: 'sent'},
+        newResponse: {date: '', message: 'Ok!', status: 'received'},
         isClick: 0,
+        response: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -176,13 +178,27 @@ createApp({
   methods: {
     
     addMessage() {
-
-
         this.contacts[this.isClick].messages.push(this.newMessage);
         this.newMessage = {date: '', message: '', status: 'sent'};
 
+        this.responseTime();
+    },
 
+    responseTime() {
+
+        this.responde = setTimeout(() => {
+            
+            this.contacts[this.isClick].messages.push(this.newResponse);
+            this.newResponse = {date: '', message: 'Ok!', status: 'received'};
+            this.responseTimeStop();
+
+        }, 1000);
+    },
+
+    responseTimeStop() {
+        clearTimeout(this.response);
     },
 
   },
+
 }).mount('#app')

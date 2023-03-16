@@ -62,13 +62,13 @@
 
 
                 <div class="flex column overflow">
-                    <div class="contacts">
+                    <div v-for="contact in contacts" class="contacts">
                         <div class="flex">
                             <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="contact.avatar" alt="">
                             </div>
                             <div>
-                                <h3>Filippo</h3>
+                                <h3>{{contact.name}}</h3>
                                 <h6>Ultimo messaggio inviato</h6>
                             </div>
                         </div>
@@ -76,132 +76,7 @@
                             <span>12:00</span>
                         </div>
                     </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="flex">
-                            <div class="main-image-size">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div>
-                                <h3>Filippo</h3>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <span>12:00</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 

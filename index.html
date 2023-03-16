@@ -57,12 +57,12 @@
 
                 <div class="flex search-bar">
                     <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="be-unite">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="be-unite" v-model="search">
                 </div>
 
 
                 <div class="flex column overflow">
-                    <div v-for="(contact, index) in contacts" class="contacts" @click="isClick = index">
+                    <div v-for="(contact, index) in filteredSearch" class="contacts" @click="isClick = index">
                         <div class="flex">
                             <div class="main-image-size">
                                 <img :src="contacts[index].avatar" alt="">

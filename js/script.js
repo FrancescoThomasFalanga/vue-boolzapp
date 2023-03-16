@@ -8,6 +8,7 @@ createApp({
         newResponse: {date: '', message: 'Ok!', status: 'received'},
         isClick: 0,
         response: 0,
+        search: "",
         contacts: [
             {
                 name: 'Michele',
@@ -198,7 +199,15 @@ createApp({
     responseTimeStop() {
         clearTimeout(this.response);
     },
-
   },
+
+  computed: {
+
+    filteredSearch() {
+        return this.contacts.filter(contactName => contactName.name.toLowerCase().includes(this.search.toLowerCase()))
+    }
+
+
+  }
 
 }).mount('#app')

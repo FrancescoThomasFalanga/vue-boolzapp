@@ -62,7 +62,7 @@
 
 
                 <div class="flex column overflow justify">
-                    <div v-for="(contact, index) in filteredSearch" class="contacts" @click="isClick = index">
+                    <div v-for="(contact, index) in filteredSearch" class="contacts" :class="index == isClick ? 'active' : '' " @click="isClick = index">
                         <div class="flex">
                             <div class="main-image-size">
                                 <img :src="contacts[index].avatar" alt="">

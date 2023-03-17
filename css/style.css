@@ -174,12 +174,16 @@ button {
 /* _______________________________________________________ */
 .contacts:hover {
     cursor: pointer;
-    background-color: #2a3942;
+    background-color: #202c33;
 }
 /* _______________________________________________________ */
 .overflow {
     height: calc(100% - 196px);
     overflow-y: scroll;
+}
+/* _______________________________________________________ */
+.active {
+    background-color: #2a3942;
 }
 /* /CONTACTS */
 

@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div>
-                            <span>12:00</span>
+                            <span v-for="(message, index) in contacts[index].messages.slice(-1)">{{message.date}}</span>
                         </div>
                     </div>
 
@@ -90,7 +90,9 @@
                         </div>
                         <div>
                             <h3>{{contacts[isClick].name}}</h3>
-                            <h6>Ultimo accesso oggi alle 12:00</h6>
+                            <div v-for="(contact, index) in contacts[isClick].messages.slice(-1)">
+                                <h6 v-for="(message, index) in contacts[isClick].messages.slice(-1)">Ultimo accesso oggi alle {{message.date}}</h6>
+                            </div>
                         </div>
                     </div>
 

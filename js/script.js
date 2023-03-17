@@ -5,9 +5,9 @@ createApp({
     return {
       
         // new message init
-        newMessage: {date: '', message: '', status: 'sent'},
+        newMessage: {date: this.getDate(), message: '', status: 'sent'},
         // new responde init
-        newResponse: {date: '', message: 'Ok!', status: 'received'},
+        newResponse: {date: this.getDate(), message: 'Ok!', status: 'received'},
         // index most important thing for the index of the array / object
         isClick: 0,
         // init the response at 0 or null, it's the same
@@ -196,7 +196,7 @@ createApp({
         } else {
 
             this.contacts[this.isClick].messages.push(this.newMessage);
-            this.newMessage = {date: '', message: '', status: 'sent'};
+            this.newMessage = {date: this.getDate(), message: '', status: 'sent'};
 
             this.responseTime();
 
@@ -210,7 +210,8 @@ createApp({
         this.responde = setTimeout(() => {
             
             this.contacts[this.isClick].messages.push(this.newResponse);
-            this.newResponse = {date: '', message: 'Ok!', status: 'received'};
+            this.newResponse = {date: this.getDate(), message: 'Ok!', status: 'received'};
+
             this.responseTimeStop();
 
         }, 1000);
@@ -220,6 +221,22 @@ createApp({
     responseTimeStop() {
         clearTimeout(this.response);
     },
+
+    // Hour and Minutes IRL
+    getDate() {
+
+        const today = new Date();
+        const newDate = Intl.DateTimeFormat("it-IT", {
+
+            hour: "numeric",
+            minute: "numeric",
+
+        }).format(today);
+
+        return newDate;
+
+    },
+
   },
 
   // filter for search bar

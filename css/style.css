@@ -53,7 +53,6 @@ body {
     flex-direction: column;
     height: calc(100vh - 40px);
     width: 100%;
-    background-color: aquamarine;
 }
 /* /CONTAINER and SIDE */
 
@@ -192,6 +191,7 @@ main {
     flex-direction: column;
     height: 100%;
     padding: 50px;
+    overflow-y: auto;
     background-image: url(../img/background.jpg);
 }
 /* _______________________________________________________ */
@@ -249,8 +249,8 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 16px;
-    left: -20px;
+    top: 17px;
+    left: -110px;
     min-width: 160px;
     padding: 10px 13px;
     z-index: 1;

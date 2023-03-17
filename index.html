@@ -69,7 +69,7 @@
                             </div>
                             <div>
                                 <h3>{{contact.name}}</h3>
-                                <h6>Ultimo messaggio inviato</h6>
+                                <h6 v-for="(message, index) in contacts[index].messages.slice(-1)">{{message.message}}</h6>
                             </div>
                         </div>
                         <div>

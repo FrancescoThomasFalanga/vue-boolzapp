@@ -320,4 +320,7 @@ p {
     cursor: pointer;
     color: #aebac1;
 }
+.fa-microphone, .fa-paper-plane {
+    font-size: 16px;
+}
 /* /FONTAWESOME */

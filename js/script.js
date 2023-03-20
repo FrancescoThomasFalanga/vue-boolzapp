@@ -4,6 +4,8 @@ createApp({
   data() {
     return {
       
+        oldIcon: "fa-solid fa-microphone",
+        newIcon: "fa-solid fa-paper-plane",
         // new message init
         newMessage: {date: this.getDate(), message: '', status: 'sent'},
         // new responde init
@@ -243,6 +245,25 @@ createApp({
 
         return newDate;
 
+    },
+    
+    //isWriting
+    isWriteing() {
+
+        if (!this.newMessage.message == "" || !this.newMessage.message == null) {
+            this.addMessage();
+        };
+
+    },
+
+    // change icon while he's writing
+    changeIcon() {
+
+        if (!this.newMessage.message == "" || !this.newMessage.message == null) {
+            return this.newIcon;
+        } else {
+            return this.oldIcon;
+        }
     },
 
   },

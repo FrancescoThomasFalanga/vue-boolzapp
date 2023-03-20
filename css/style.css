@@ -10,7 +10,7 @@ body {
     height: 100%;
     color: white;
     background-color: #101a20;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -107,7 +107,7 @@ h4 {
 }
 /* _______________________________________________________ */
 h6 {
-    width: 300px;
+    max-width: 300px;
     height: 24px;
     color: #aebac1;
     overflow: hidden;
@@ -129,7 +129,7 @@ span {
 /* INPUT AND BUTTONS */
 input {
     padding:  9px 12px;
-    width: 100%;
+    flex-grow: 1;
     border: none;
     border-radius: 10px;
     color: #aebac1;
@@ -255,6 +255,7 @@ footer {
 }
 /* _______________________________________________________ */
 .max-size {
+    display: flex;
     width: 100%;
 }
 /* /FOOTER */
@@ -465,11 +466,7 @@ body.light {
 
 @media screen and (max-width: 576px) {
 
-    body {
-        overflow-x: hidden;
-        overflow-y: hidden;
-        }
-
+    
     .main-side {
         display: none;
     }

@@ -20,7 +20,7 @@ createApp({
         items: [
             { info: 'Message info' },
             { delete: 'Delete message', },
-          ],
+        ],
         contacts: [
             {
                 name: 'Michele',
@@ -183,7 +183,16 @@ createApp({
                     },
                 ],
             }
-        ]
+        ],
+        randomAnswers: [
+            "Ciao come va?",
+            "Si tutto bene",
+            "Come stai tu?",
+            "No, ancora non ho ultimato",
+            "Si, ultimamente faccio così",
+            "Questa sera a cena fuori",
+            "Per oggi non riesco...",
+        ],
     }
   },
 
@@ -217,8 +226,7 @@ createApp({
             
             if (!this.isClick) {
 
-                this.contacts[this.isClick].messages.push(this.newResponse);
-                this.newResponse = {date: this.getDate(), message: 'Ok!', status: 'received'};
+                this.randomAnswer();
     
                 this.responseTimeStop();
 
@@ -266,7 +274,25 @@ createApp({
         }
     },
 
+    // generate a random answer from computer while submit
+    randomAnswer() {
+
+        let randomIndex = Math.floor(Math.random() * 7);
+
+        let message = {
+            date: this.getDate(),
+            message: this.randomAnswers[randomIndex],
+            status: "received"
+        };
+
+        this.contacts[this.isClick].messages.push(message);
+
+        message = {date: this.getDate(), message: this.randomAnswers[randomIndex], status: 'received'};
+
+    },
+
   },
+
 
   // filter for search bar
   computed: {

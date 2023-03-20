@@ -337,6 +337,22 @@ createApp({
 
     },
 
+    splashPage() {
+        
+        let splash = document.querySelector(".splash");
+
+
+
+        setTimeout(() => {
+            splash.classList.add("hidden");
+        }, 2000);
+        
+    },
+
+  },
+
+  mounted: function() {
+    this.splashPage();
   },
 
   

@@ -19,7 +19,6 @@
 
     <div id="app">
 
-
         <div class="container">
 
             <div class="splash">
@@ -118,6 +117,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <input type="checkbox" class="checkbox" id="checkbox" @click="ciao()">
+                            <label for="checkbox" class="label">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                                <div class="ball"></div>
+                            </label>
+                       </div>
                     </div>
                 </header>
 
@@ -149,7 +156,7 @@
 
                     <div class="flex gap" style="width: 100%; justify-content: inherit;">                        
                         <div class="max-size">
-                            <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage.message" @keyup.enter="addMessage()">
+                            <input class="npt1" type="text" placeholder="Scrivi un messaggio" v-model="newMessage.message" @keyup.enter="addMessage()">
                         </div>
     
     

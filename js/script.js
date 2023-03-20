@@ -349,6 +349,25 @@ createApp({
         
     },
 
+    ciao() {
+
+        document.body.classList.toggle("light");
+        document.querySelector(".search-bar").classList.toggle("light");
+        document.querySelector(".overflow").classList.toggle("light");
+        document.querySelector(".their-message").classList.toggle("light");
+        document.querySelector(".delete_hover").classList.toggle("light");
+        document.querySelector("span").classList.toggle("light");
+        document.querySelector("footer").classList.toggle("mhlight");
+        document.querySelector("header").classList.toggle("mhlight");
+        document.querySelector(".my-profile").classList.toggle("mhlight");
+        document.querySelector(".delete_hover").classList.toggle("mhlight");
+        document.querySelector(".be-unite").classList.toggle("mhlight");
+        document.querySelector(".fa-magnifying-glass").classList.toggle("mhlight");
+        document.querySelector(".npt1").classList.toggle("light");
+        document.querySelector("main").classList.toggle("lightimg");
+        document.querySelector(".contacts").classList.toggle("activeLight");
+    }
+
   },
 
   mounted: function() {

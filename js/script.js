@@ -4,8 +4,10 @@ createApp({
   data() {
     return {
       
+        // icon while writing
         oldIcon: "fa-solid fa-microphone",
         newIcon: "fa-solid fa-paper-plane",
+        // contact status
         isWrite: "Sta scrivendo...",
         isOnline: "Online",
         lastAccess: "Ultimo accesso oggi alle: ",
@@ -305,6 +307,7 @@ createApp({
 
     },
 
+    // delete a chat + messages
     deleteChat() {
 
         this.contacts.splice(this.isClick, 1);
@@ -313,6 +316,7 @@ createApp({
 
     },
 
+    // add a contact
     addConversation() {
 
         let newContactName = prompt("Nome e Cognome della persona da aggiungere");
@@ -337,6 +341,7 @@ createApp({
 
     },
 
+    // splash page on load
     splashPage() {
         
         let splash = document.querySelector(".splash");
@@ -349,6 +354,7 @@ createApp({
         
     },
 
+    // switch to light version or dark
     lightVersion() {
 
         document.body.classList.toggle("light");
@@ -356,7 +362,6 @@ createApp({
         document.querySelector(".overflow").classList.toggle("light");
         document.querySelector(".their-message").classList.toggle("light");
         document.querySelector(".delete_hover").classList.toggle("light");
-        document.querySelector("span").classList.toggle("light");
         document.querySelector("footer").classList.toggle("mhlight");
         document.querySelector("header").classList.toggle("mhlight");
         document.querySelector(".my-profile").classList.toggle("mhlight");
@@ -368,7 +373,10 @@ createApp({
         document.querySelector(".contacts").classList.toggle("activeLight");
     },
 
-    mobileView() {
+    // media query for mobile + visual
+    mobileView(index) {
+
+        this.isClick = index;
 
         let mainSide = document.querySelector(".main-side");
         let leftSide = document.querySelector(".left-side");
@@ -378,6 +386,7 @@ createApp({
 
     },
 
+    // in media query for mobile for going back to contact list
     goBack() {
         let mainSide = document.querySelector(".main-side");
         let leftSide = document.querySelector(".left-side");
@@ -386,12 +395,25 @@ createApp({
         mainSide.classList.remove("main-side-after");
     },
 
+    ciao() {
+
+        let ciaone = prompt("Quale chat vuoi visualizzare? Digita un numero da 0 a 7");
+
+        this.isClick = ciaone;
+
+    }
 
 
   },
 
+  // show this function on page load
   mounted: function() {
     this.splashPage();
+  },
+
+  created: function() {
+
+    this.ciao();
   },
 
   

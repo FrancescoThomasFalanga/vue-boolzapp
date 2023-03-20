@@ -313,6 +313,30 @@ createApp({
 
     },
 
+    addConversation() {
+
+        let newContactName = prompt("Nome e Cognome della persona da aggiungere");
+        let newContactImg = prompt("Indirizzo URL della foto da aggiungere");
+
+        console.log(newContactName);
+        console.log(newContactImg);
+
+        let newUser = {
+            name: newContactName,
+            avatar: newContactImg,
+            visible: true,
+            messages: [
+                {
+                    date: this.getDate(),
+
+                },
+            ],
+        }
+
+        this.contacts.unshift(newUser);
+
+    },
+
   },
 
   

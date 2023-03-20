@@ -14,6 +14,7 @@
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
 
 
     <div id="app">
@@ -28,16 +29,16 @@
                         <img src="img/avatar_io.jpg" alt="">
                     </div>
                     <div class="flex">
-                        <div class="icon-padding">
+                        <div >
                             <i class="fa-solid fa-users"></i>
                         </div>
-                        <div class="icon-padding">
+                        <div >
                             <i class="fa-solid fa-circle-notch"></i>
                         </div>
-                        <div class="icon-padding">
+                        <div >
                             <i class="fa-solid fa-message"></i>
                         </div>
-                        <div class="icon-padding">
+                        <div >
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
@@ -97,11 +98,17 @@
                     </div>
 
                     <div class="flex gap">
-                        <div class="icon-padding">
+                        <div >
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <div class="icon-padding">
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <div>
+                            <div class="delete">
+                                <button class="delete_hover"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                <div class="delete_menu">
+                                    <span @click="contacts[isClick].messages.splice(index)">Elimina messaggi</span>
+                                    <span @click="deleteChat()">Elimina chat</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -124,10 +131,10 @@
 
                 <footer class="flex">
                     <div class="flex">
-                        <div class="icon-padding">
+                        <div>
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
-                        <div class="icon-padding">
+                        <div>
                             <i class="fa-solid fa-paperclip"></i>
                         </div>
                     </div>
@@ -138,7 +145,7 @@
                         </div>
     
     
-                        <div class="icon-padding">
+                        <div>
                             <span @click="isWriting()"><i :class="changeIcon()"></i></span>
                         </div>
                     </div>

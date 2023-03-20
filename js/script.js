@@ -226,15 +226,10 @@ createApp({
     responseTime() {
 
         this.responde = setTimeout(() => {
-            
-            if (!this.isClick) {
 
                 this.randomAnswer();
                 
-    
                 this.responseTimeStop();
-
-            };
 
         }, 1000);
     },
@@ -310,7 +305,17 @@ createApp({
 
     },
 
+    deleteChat() {
+
+        this.contacts.splice(this.isClick, 1);
+
+        this.isClick = 0;
+
+    },
+
   },
+
+  
 
 
   // filter for search bar

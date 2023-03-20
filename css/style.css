@@ -136,7 +136,6 @@ input {
 }
 /* _______________________________________________________ */
 button {
-    padding:  9px 12px;
     cursor: pointer;
     border: none;
     border-radius: 10px;
@@ -151,7 +150,7 @@ button {
 /* CONTACTS */
 .bell {
     justify-content: inherit;
-    padding: 10px 16px;
+    padding: 20px 16px;
     background-color: #8edafc;
 }
 /* _______________________________________________________ */
@@ -265,8 +264,8 @@ footer {
 .dropdown {
     display: inline-block;
     position: absolute;
-    top: 0;
-    right: 8px;
+    top: -7px;
+    right: 0px;
 }
 /* _______________________________________________________ */
 .dropdown-content {
@@ -292,14 +291,50 @@ p {
 }
 /* /DROPDOWN */
 
+/* DELETEMENU */
+.delete {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+/* _______________________________________________________ */
+.delete_hover {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: inherit;
+    background-color: #202c33;
+}
+/* _______________________________________________________ */
+.delete_hover:hover {
+    background-color: #2a3942;
+}
+/* _______________________________________________________ */
+.delete_menu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 40%;
+    min-width: 200px;
+    background: #202c33;
+    box-shadow: 0 3px 2px rgba(0,0,0,0.3);
+}
+/* _______________________________________________________ */
+.delete:hover .delete_menu {
+    display: block;
+}
+/* _______________________________________________________ */
+.delete_menu span {
+    display: block;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+/* /DELETEMENU */
+
 
 
 /* FONTAWESOME */
-.icon-padding {
-    padding: 10px;
-    color: #aebac1;
-}
-/* _______________________________________________________ */
 .footer-icon-padding {
     padding: 5px 10px;
 }
@@ -319,8 +354,12 @@ p {
 .fa-solid, .fa-regular {
     cursor: pointer;
     color: #aebac1;
+    padding: 10px;
 }
 .fa-microphone, .fa-paper-plane {
     font-size: 16px;
 }
 /* /FONTAWESOME */
+
+
+

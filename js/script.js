@@ -193,6 +193,10 @@ createApp({
 
         if (this.newMessage.message == "" || this.newMessage.message == null) {
             console.log("Error Occured While SUBMIT");
+        } else if (/^\s*$/.test(this.newMessage.message)){
+
+            console.log("Error Occured While SUBMIT");
+
         } else {
 
             this.contacts[this.isClick].messages.push(this.newMessage);
@@ -209,10 +213,14 @@ createApp({
 
         this.responde = setTimeout(() => {
             
-            this.contacts[this.isClick].messages.push(this.newResponse);
-            this.newResponse = {date: this.getDate(), message: 'Ok!', status: 'received'};
+            if (!this.isClick) {
 
-            this.responseTimeStop();
+                this.contacts[this.isClick].messages.push(this.newResponse);
+                this.newResponse = {date: this.getDate(), message: 'Ok!', status: 'received'};
+    
+                this.responseTimeStop();
+
+            };
 
         }, 1000);
     },

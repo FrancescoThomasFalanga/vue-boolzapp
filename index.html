@@ -91,7 +91,7 @@
                         <div>
                             <h3>{{contacts[isClick].name}}</h3>
                             <div v-for="(contact, index) in contacts[isClick].messages.slice(-1)">
-                                <h6 v-for="(message, index) in contacts[isClick].messages.slice(-1)">Ultimo accesso oggi alle {{message.date}}</h6>
+                                <h6 v-for="(message, index) in contacts[isClick].messages.slice(-1)">{{status()}}</h6>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
     
     
                         <div class="icon-padding">
-                            <span @click="isWriteing()"><i :class="changeIcon()"></i></span>
+                            <span @click="isWriting()"><i :class="changeIcon()"></i></span>
                         </div>
                     </div>
                 </footer>

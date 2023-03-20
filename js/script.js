@@ -6,6 +6,9 @@ createApp({
       
         oldIcon: "fa-solid fa-microphone",
         newIcon: "fa-solid fa-paper-plane",
+        isWrite: "Sta scrivendo...",
+        isOnline: "Online",
+        lastAccess: "Ultimo accesso oggi alle: ",
         // new message init
         newMessage: {date: this.getDate(), message: '', status: 'sent'},
         // new responde init
@@ -227,6 +230,7 @@ createApp({
             if (!this.isClick) {
 
                 this.randomAnswer();
+                
     
                 this.responseTimeStop();
 
@@ -256,11 +260,26 @@ createApp({
     },
     
     //isWriting
-    isWriteing() {
+    isWriting() {
 
         if (!this.newMessage.message == "" || !this.newMessage.message == null) {
             this.addMessage();
         };
+
+    },
+
+    // status
+    status() {
+
+        if (!this.newMessage.message == "" || !this.newMessage.message == null) {
+
+            return this.isWrite;
+
+        } else if (this.newMessage.message == "" || this.newMessage.message == null) {
+
+            return this.lastAccess + this.getDate();
+
+        }
 
     },
 

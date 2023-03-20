@@ -457,3 +457,44 @@ body.light {
 .fa-sun {
     color: #f39c12;
 }
+
+.mobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 576px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        }
+
+    .main-side {
+        display: none;
+    }
+
+    .left-side {
+        flex-grow: 1;
+    }
+
+    .left-side-after {
+        display: none;
+    }
+
+    .main-side-after {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .mobile {
+        display: block;
+        left: 15px;
+        border-radius: 50px;
+    }
+
+    header {
+        padding-left: 0;
+    }
+
+}

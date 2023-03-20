@@ -349,7 +349,7 @@ createApp({
         
     },
 
-    ciao() {
+    lightVersion() {
 
         document.body.classList.toggle("light");
         document.querySelector(".search-bar").classList.toggle("light");
@@ -366,7 +366,27 @@ createApp({
         document.querySelector(".npt1").classList.toggle("light");
         document.querySelector("main").classList.toggle("lightimg");
         document.querySelector(".contacts").classList.toggle("activeLight");
-    }
+    },
+
+    mobileView() {
+
+        let mainSide = document.querySelector(".main-side");
+        let leftSide = document.querySelector(".left-side");
+
+        leftSide.classList.add("left-side-after");
+        mainSide.classList.add("main-side-after");
+
+    },
+
+    goBack() {
+        let mainSide = document.querySelector(".main-side");
+        let leftSide = document.querySelector(".left-side");
+
+        leftSide.classList.remove("left-side-after");
+        mainSide.classList.remove("main-side-after");
+    },
+
+
 
   },
 

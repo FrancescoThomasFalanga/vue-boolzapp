@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+/* _________________________________________ */
 body {
     width: 100%;
     height: 100%;
@@ -20,19 +20,21 @@ body {
 	-webkit-box-shadow: inset 0 0 6px #111b21;
 	background-color: #111b21;
 }
-
+/* _________________________________________ */
 ::-webkit-scrollbar {
 	width: 5px;
 	background-color: #111b21;
 }
-
+/* _________________________________________ */
 ::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px #111b21;
 	background-color: #373f44;
 }
 /* /SCROLL BAR CUSTOM */
 
-
+.ciao {
+    font-size: 25px;
+}
 
 /* CONTAINER and SIDE */
 .container {
@@ -41,14 +43,14 @@ body {
     height: 100%;
     max-width: 1600px;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .left-side {
     height: calc(100vh - 40px);
     width: calc(100% / 4 + 200px);
     border-right: 1px solid #272f34;
     background-color: #111b21;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .main-side {
     display: flex;
     flex-direction: column;
@@ -65,15 +67,15 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .justify {
     justify-content: inherit;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .column {
     flex-direction: column;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .gap {
     gap: 10px;
 }
@@ -85,12 +87,12 @@ body {
 .main-image-size {
     padding-right: 15px;
 }
-
+/* _________________________________________ */
 img {
     width: 50px;
     border-radius: 100%;
 }
-
+/* _________________________________________ */
 header, .my-profile {
     padding: 10px 16px;
     background-color: #202c33;
@@ -105,7 +107,7 @@ h4 {
     font-size: 14px;
     font-weight: normal;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 h6 {
     max-width: 300px;
     height: 24px;
@@ -114,11 +116,11 @@ h6 {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 span {
     font-size: 12px;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .black {
     color: rgba(0, 0, 0, 0.815);
 }
@@ -135,7 +137,7 @@ input {
     color: #aebac1;
     background-color: #2a3942;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 button {
     cursor: pointer;
     border: none;
@@ -154,18 +156,18 @@ button {
     padding: 20px 16px;
     background-color: #8edafc;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .notify {
     text-decoration: underline;
     font-size: 14px;
     color: #5d869d;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .be-unite {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .search-bar, .contacts {
     padding: 10px 16px;
 }
@@ -175,24 +177,24 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .contacts {
     display: flex;
     justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid #2d353a;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .contacts:hover {
     cursor: pointer;
     background-color: #202c33;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .overflow {
     height: calc(100% - 210px);
     overflow-y: scroll;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .active {
     background-color: #2a3942;
 }
@@ -211,7 +213,7 @@ main {
     scroll-snap-type: y proximity;
     background-image: url(../img/background.jpg);
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .my-message {
     position: relative;
     display: flex;
@@ -227,7 +229,7 @@ main {
 main > div:last-child {
     scroll-snap-align: end;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .their-message {
     position: relative;
     display: flex;
@@ -237,7 +239,7 @@ main > div:last-child {
     border-radius: 6px;
     background-color: #202c33;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .data {
     position: absolute;
     bottom: 2px;
@@ -253,7 +255,7 @@ footer {
     padding: 10px 16px;
     background-color: #202c33;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .max-size {
     display: flex;
     width: 100%;
@@ -269,7 +271,7 @@ footer {
     top: -7px;
     right: 0px;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -282,11 +284,11 @@ footer {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: #202c33;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 p {
     color: #a9bac1;
     cursor: pointer;
@@ -297,9 +299,9 @@ p {
 .delete {
     position: relative;
     display: inline-block;
-    z-index: 10;
+    z-index: 1;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .delete_hover {
     display: inline-block;
     padding: 10px;
@@ -307,7 +309,7 @@ p {
     border-radius: inherit;
     background-color: #202c33;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .delete_menu {
     position: absolute;
     display: none;
@@ -317,11 +319,11 @@ p {
     background: #202c33;
     box-shadow: 0 3px 2px rgba(0,0,0,0.3);
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .delete:hover .delete_menu {
     display: block;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .delete_menu span {
     display: block;
     padding: 15px;
@@ -336,7 +338,7 @@ p {
 .footer-icon-padding {
     padding: 5px 10px;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .fa-bell-slash {
     margin-right: 15px;
     padding: 16px 14px;
@@ -344,23 +346,25 @@ p {
     color: #8edafc;
     background-color: #202c33;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .fa-bars-filter {
     color: white;
 }
-/* _______________________________________________________ */
+/* _________________________________________ */
 .fa-solid, .fa-regular {
     cursor: pointer;
     color: #aebac1;
     padding: 10px;
+    font-size: 16px;
 }
+/* _________________________________________ */
 .fa-microphone, .fa-paper-plane {
     font-size: 16px;
 }
 /* /FONTAWESOME */
 
 
-
+/* SPLASH MESSAGE */
 .splash {
     cursor: pointer;
     position: fixed;
@@ -370,13 +374,13 @@ p {
     width: 100%;
     transform: translate(-50%, -50%);
     background-color: black;
-    z-index: 15;
+    z-index: 3;
 }
-
+/* _________________________________________ */
 .hidden {
     display: none;
 }
-
+/* _________________________________________ */
 .splash-header {
     height: 100%;
     color: white;
@@ -385,45 +389,16 @@ p {
     align-items: center;
     text-decoration: underline;
 }
+/* /SPLASH MESSAGE */
 
 
 
-
-body.light {
-    background-color: #fff;
-    color: black;
-}
-
-.light {
-    background-color: #fff;
-    color: black;
-}
-
-.mhlight {
-    background-color: #f0f2f5;
-    color: black;
-}
-
-.lightimg {
-    background-image: url(../img/mine.jpg);
-}
-
-.activeLight {
-    background-color: #f0f2f5;
-    color: black;
-}
-
-.ciao {
-    color: black;
-}
-
-
+/* DARK / LIGHT MODE */
 .checkbox {
     opacity: 0;
     position: absolute;
-
 }
-
+/* _________________________________________ */
 .label {
     background-color: #111;
     display: flex;
@@ -435,7 +410,7 @@ body.light {
     height: 26px;
     width: 50px;
 }
-
+/* _________________________________________ */
 .ball {
     background-color: #fff;
     border-radius: 50%;
@@ -446,52 +421,81 @@ body.light {
     width: 22px;
     transition: transform 0.2s linear;
 }
-
+/* _________________________________________ */
 .checkbox:checked + .label .ball {
     transform: translateX(24px);
 }
-
+/* _________________________________________ */
 .fa-moon {
     color #f1c40f;
 }
-
+/* _________________________________________ */
 .fa-sun {
     color: #f39c12;
 }
-
+/* _________________________________________ */
 .mobile {
     display: none;
 }
+/* /DARK / LIGHT MODE */
 
 
+/* settings for dark and light mode */
+body.light {
+    background-color: #fff;
+    color: black;
+}
+/* _________________________________________ */
+.light {
+    background-color: #fff;
+    color: black;
+}
+/* _________________________________________ */
+.mhlight {
+    background-color: #f0f2f5;
+    color: black;
+}
+/* _________________________________________ */
+.lightimg {
+    background-image: url(../img/mine.jpg);
+}
+/* _________________________________________ */
+.activeLight {
+    background-color: #f0f2f5;
+    color: black;
+}
+/* /settings for dark and light mode */
+
+
+
+
+/* MEDIA QUERY FOR MOBILE */
 @media screen and (max-width: 576px) {
-
-    
     .main-side {
         display: none;
     }
-
+/* _________________________________________ */
     .left-side {
         flex-grow: 1;
     }
-
+/* _________________________________________ */
     .left-side-after {
         display: none;
     }
-
+/* _________________________________________ */
     .main-side-after {
         display: flex;
         overflow: hidden;
     }
-
+/* _________________________________________ */
     .mobile {
         display: block;
         left: 15px;
         border-radius: 50px;
     }
-
+/* _________________________________________ */
     header {
         padding-left: 0;
     }
-
 }
+/* /MEDIA QUERY FOR MOBILE */

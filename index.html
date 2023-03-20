@@ -15,18 +15,23 @@
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     
-
-
+    <!-- vue js app -->
     <div id="app">
 
+
+        <!-- common centered container -->
         <div class="container">
 
+            <!-- splash message -->
             <div class="splash">
                 <h1 class="splash-header">(= Benvenuto nel mio Boolzap =)</h1>
             </div>
+            <!-- /splash message -->
 
 
+            <!-- LEFT SIDE: my-profile, notified, search-bar, contact-list -->
             <div class="left-side">
+                <!-- top left -->
                 <div class="flex my-profile">
                     <div>
                         <img src="img/avatar_io.jpg" alt="">
@@ -45,12 +50,14 @@
                             <i class="fa-solid fa-message"></i>
                         </div>
                         <div >
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical" @click="bigOrSmall()"></i>
                         </div>
                     </div>
                 </div>
+                <!-- /top left -->
 
 
+                <!-- want to be notified? -->
                 <div class="flex bell">
                     <div>
                         <i class="fa-solid fa-bell-slash"></i>
@@ -60,14 +67,18 @@
                         <span class="notify">Attiva notifiche desktop</span>
                     </div>
                 </div>
+                <!-- /want to be notified? -->
 
 
+                <!-- left search-bar -->
                 <div class="flex search-bar">
                     <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <input type="text" placeholder="Cerca o inizia una nuova chat" class="be-unite" v-model="search">
                 </div>
+                <!-- /left search-bar -->
 
 
+                <!-- bottom left -->
                 <div class="flex column overflow justify">
                     <div v-for="(contact, index) in filteredSearch" class="contacts" :class="index == isClick ? 'active' : '' " @click="mobileView(index)">
                         <div class="flex">
@@ -83,13 +94,16 @@
                             <span v-for="(message, index) in contacts[index].messages.slice(-1)">{{message.date}}</span>
                         </div>
                     </div>
-
                 </div>
+                <!-- /bottom left -->
             </div>
+            <!-- /LEFT SIDE: my-profile, notified, search-bar, contact-list -->
 
 
+            <!-- MAIN SIDE: top contact - messages - and footer -->
             <div class="main-side">
 
+                <!-- HEADER -->
                 <header class="flex">
                     <div class="flex">
                         <div class="mobile" @click="goBack()"><i class="fa-solid fa-left-long"></i></div>
@@ -128,8 +142,10 @@
                        </div>
                     </div>
                 </header>
+                <!-- /HEADER -->
 
 
+                <!-- MAIN -->
                 <main>
                     <div v-for="(message, index) in contacts[isClick].messages" :class="message.status == 'sent' ? 'my-message' : 'their-message' ">
                         <h4>{{message.message}}</h4>
@@ -137,14 +153,16 @@
                         <div class="dropdown">
                             <span><i class="fa-solid fa-chevron-down"></i></span>
                             <div class="dropdown-content" v-for="item in items">
-                            <p>{{item.info}}</p>
-                            <p @click="contacts[isClick].messages.splice(index, 1)">{{item.delete}}</p>
+                                <p>{{item.info}}</p>
+                                <p @click="contacts[isClick].messages.splice(index, 1)">{{item.delete}}</p>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </main>
+                <!-- /MAIN -->
 
 
+                <!-- FOOTER -->
                 <footer class="flex">
                     <div class="flex">
                         <div>
@@ -160,21 +178,21 @@
                             <input class="npt1" type="text" placeholder="Scrivi un messaggio" v-model="newMessage.message" @keyup.enter="addMessage()">
                         </div>
     
-    
                         <div>
                             <span @click="isWriting()"><i :class="changeIcon()"></i></span>
                         </div>
                     </div>
                 </footer>
+                <!-- /FOOTER -->
 
             </div>
-
-
+            <!-- /MAIN SIDE: top contact - messages - and footer -->
         </div>
+        <!-- /common centered container -->
 
 
     </div>
-
+    <!-- /vue js app -->
 
     <script src="js/script.js"></script>
 </body>

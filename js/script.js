@@ -395,13 +395,18 @@ createApp({
         mainSide.classList.remove("main-side-after");
     },
 
-    ciao() {
+    // with this prompt you decide what chat show
+    welcomeMsn() {
 
-        let ciaone = prompt("Quale chat vuoi visualizzare? Digita un numero da 0 a 7");
+        let welcomeMessage = prompt("Quale chat vuoi visualizzare? Digita un numero da 0 a 7");
 
-        this.isClick = ciaone;
+        this.isClick = welcomeMessage;
 
-    }
+    },
+
+    bigOrSmall() {
+        document.body.classList.toggle("ciao");
+    },
 
 
   },
@@ -413,7 +418,7 @@ createApp({
 
   created: function() {
 
-    this.ciao();
+    this.welcomeMsn();
   },
 
   

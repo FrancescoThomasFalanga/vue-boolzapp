@@ -265,17 +265,28 @@ footer {
 
 
 /* DROPDOWN */
-.dropdown {
+.my-message .dropdown, .their-message .dropdown {
+    display: none;
+}
+
+.my-message:hover .dropdown, .their-message:hover .dropdown {
     display: inline-block;
     position: absolute;
-    top: -7px;
-    right: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50px;
+    background-image: linear-gradient(to left, #005c4b, #005c4b, rgba(0, 0, 0, 0));
+}
+
+.their-message:hover .dropdown {
+    background-image: linear-gradient(to left, #202c33, #202c33 , rgba(0, 0, 0, 0));
 }
 /* _________________________________________ */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 17px;
+    top: 30px;
     left: -110px;
     min-width: 160px;
     padding: 10px 13px;
